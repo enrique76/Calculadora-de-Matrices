@@ -1,6 +1,6 @@
 # Calculadora-de-Matrices
 # Version Actual 06/11/21 1.7
-- Actualmente se trabajo en una graficadora sencilla
+- Actualmente se trabaja en una graficadora sencilla
 
 ![image](https://user-images.githubusercontent.com/64999014/140606776-45244415-cdc1-48df-9150-749c6b169671.png)
 
