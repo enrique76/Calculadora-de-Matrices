@@ -1,0 +1,1146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1180</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculadora de Matrices</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="iconos.qrc">
+    <normaloff>:/new/prefix1/iconos/matriz.png</normaloff>:/new/prefix1/iconos/matriz.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 10pt &quot;Arial&quot;
+qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255, 255, 255, 255))
+qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(9, 41, 4, 255), stop:0.085 rgba(2, 79, 0, 255), stop:0.19 rgba(50, 147, 22, 255), stop:0.275 rgba(236, 191, 49, 255), stop:0.39 rgba(243, 61, 34, 255), stop:0.555 rgba(135, 81, 60, 255), stop:0.667 rgba(121, 75, 255, 255), stop:0.825 rgba(164, 255, 244, 255), stop:0.885 rgba(104, 222, 71, 255), stop:1 rgba(93, 128, 0, 255))
+url(:/new/prefix1/iconos/119470305_769224333620822_2647290635897348482_n.jpg)</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="0">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_9">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>Filas en A</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="fa">
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="text">
+               <string>Columnas en A</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="ca">
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>99</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QPushButton" name="AleatorioA">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/amarillo.png</normaloff>:/new/prefix1/iconos/amarillo.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 1</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="identidad_A">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/rojo.png</normaloff>:/new/prefix1/iconos/rojo.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 2</string>
+              </property>
+              <property name="autoDefault">
+               <bool>false</bool>
+              </property>
+              <property name="default">
+               <bool>false</bool>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_2">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="llenarNA">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/verde.png</normaloff>:/new/prefix1/iconos/verde.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 3</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_3">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="OrdenarA">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/naranja.png</normaloff>:/new/prefix1/iconos/naranja.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 4</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="desordenar_A">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/cafe.png</normaloff>:/new/prefix1/iconos/cafe.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 5</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_4">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="IncrementoA">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/azul.png</normaloff>:/new/prefix1/iconos/azul.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 6</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="i_s_A">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/morado.png</normaloff>:/new/prefix1/iconos/morado.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 7</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="saltos_A">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/rosa.png</normaloff>:/new/prefix1/iconos/rosa.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>A, 8</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="A">
+            <property name="minimumSize">
+             <size>
+              <width>50</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="mouseTracking">
+             <bool>false</bool>
+            </property>
+            <property name="tabletTracking">
+             <bool>false</bool>
+            </property>
+            <property name="rowCount">
+             <number>1</number>
+            </property>
+            <property name="columnCount">
+             <number>1</number>
+            </property>
+            <row/>
+            <column>
+             <property name="text">
+              <string>x1</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="text">
+               <string>                                        Limites en A           nxn:   </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="nA">
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="text">
+               <string>Inferior</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="iA">
+              <property name="minimum">
+               <number>-9999</number>
+              </property>
+              <property name="maximum">
+               <number>9999</number>
+              </property>
+              <property name="value">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Auxilar</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="aux_A">
+              <property name="decimals">
+               <number>5</number>
+              </property>
+              <property name="minimum">
+               <double>-1000000.000000000000000</double>
+              </property>
+              <property name="maximum">
+               <double>1000000000.000000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_5">
+              <property name="text">
+               <string>Superior</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="sA">
+              <property name="minimum">
+               <number>-9999</number>
+              </property>
+              <property name="maximum">
+               <number>9999</number>
+              </property>
+              <property name="value">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QPushButton" name="cambio">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton#evilButton {
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/intercambio (1).png</normaloff>:/new/prefix1/iconos/intercambio (1).png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>C</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="vLlenar">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>0</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTableWidget" name="vResultados">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="rowCount">
+               <number>1</number>
+              </property>
+              <property name="columnCount">
+               <number>1</number>
+              </property>
+              <row/>
+              <column/>
+              <item row="0" column="0">
+               <property name="text">
+                <string>0</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="nV">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="copiar_M">
+              <property name="maximumSize">
+               <size>
+                <width>100</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QPushButton#evilButton {
+    background-color: red;
+    border-style: outset;
+    border-width: 2px;
+    border-radius: 10px;
+    border-color: beige;
+    font: bold 14px;
+    min-width: 10em;
+    padding: 6px;
+}</string>
+              </property>
+              <property name="text">
+               <string>Copiar</string>
+              </property>
+              <property name="shortcut">
+               <string>Ctrl+C</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="text">
+               <string>Filas en B</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="fb">
+              <property name="minimum">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="text">
+               <string>Columnas en B</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="cb">
+              <property name="minimum">
+               <number>1</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QPushButton" name="AleatorioB">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/amarillo.png</normaloff>:/new/prefix1/iconos/amarillo.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 1</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="identidad_B">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/rojo.png</normaloff>:/new/prefix1/iconos/rojo.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 2</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="llenarNB">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/verde.png</normaloff>:/new/prefix1/iconos/verde.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 3</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_7">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="OrdenarB">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/naranja.png</normaloff>:/new/prefix1/iconos/naranja.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 4</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="desordenar_B">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/cafe.png</normaloff>:/new/prefix1/iconos/cafe.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 5</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_8">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="IncrementoB">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/azul.png</normaloff>:/new/prefix1/iconos/azul.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 6</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="i_s_B">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/morado.png</normaloff>:/new/prefix1/iconos/morado.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 7</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="saltos_B">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="icon">
+               <iconset resource="iconos.qrc">
+                <normaloff>:/new/prefix1/iconos/rosa.png</normaloff>:/new/prefix1/iconos/rosa.png</iconset>
+              </property>
+              <property name="shortcut">
+               <string>B, 8</string>
+              </property>
+              <property name="flat">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="B">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="rowCount">
+             <number>1</number>
+            </property>
+            <property name="columnCount">
+             <number>1</number>
+            </property>
+            <row/>
+            <column/>
+            <item row="0" column="0">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>                                   Limites en B            nxn:   </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="nB">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_7">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Inferior</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="iB">
+                <property name="minimum">
+                 <number>-9999</number>
+                </property>
+                <property name="maximum">
+                 <number>9999</number>
+                </property>
+                <property name="value">
+                 <number>1</number>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Auxiliar</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QDoubleSpinBox" name="aux_B">
+                <property name="decimals">
+                 <number>5</number>
+                </property>
+                <property name="minimum">
+                 <double>-10000000000.000000000000000</double>
+                </property>
+                <property name="maximum">
+                 <double>10000000.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Superior</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sB">
+                <property name="minimum">
+                 <number>-9999</number>
+                </property>
+                <property name="maximum">
+                 <number>9999</number>
+                </property>
+                <property name="value">
+                 <number>10</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Tiempo = </string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="tiempo">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="hora">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QLabel" name="fecha">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1180</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo </string>
+    </property>
+    <widget class="QMenu" name="menuAbrir_en">
+     <property name="title">
+      <string>Abrir en ..</string>
+     </property>
+     <addaction name="actionA"/>
+     <addaction name="actionB"/>
+     <addaction name="actionV"/>
+    </widget>
+    <widget class="QMenu" name="menuGuardar_Matriz">
+     <property name="title">
+      <string>Guardar Matriz ..</string>
+     </property>
+     <addaction name="actionA_2"/>
+     <addaction name="actionB_2"/>
+     <addaction name="actionV_2"/>
+    </widget>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+    <addaction name="menuAbrir_en"/>
+    <addaction name="menuGuardar_Matriz"/>
+    <addaction name="actionGuardar_Todo"/>
+    <addaction name="separator"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuSobre">
+    <property name="title">
+     <string>Sobre</string>
+    </property>
+    <addaction name="actionAyuda"/>
+    <addaction name="actionSobre_QT"/>
+    <addaction name="actionSobre_Autor"/>
+    <addaction name="actionCodigo_Fuente"/>
+    <addaction name="actionDescargar"/>
+   </widget>
+   <widget class="QMenu" name="menuFunciones">
+    <property name="title">
+     <string>Funciones</string>
+    </property>
+    <addaction name="actionEntre_Matrices"/>
+    <addaction name="actionEntre_Escalar"/>
+    <addaction name="separator"/>
+    <addaction name="actionTrigonometria"/>
+    <addaction name="separator"/>
+    <addaction name="actionAtributos"/>
+    <addaction name="separator"/>
+    <addaction name="actionInterpolar"/>
+    <addaction name="actionExtrapolar"/>
+    <addaction name="separator"/>
+    <addaction name="actionPorbabilidad_y_Estadistica"/>
+    <addaction name="separator"/>
+    <addaction name="actionExtras"/>
+    <addaction name="separator"/>
+    <addaction name="actionGraficar_Funciones"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuSobre"/>
+   <addaction name="menuFunciones"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionGuardar_Todo">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/salvar.png</normaloff>:/new/prefix1/iconos/salvar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar Todo</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionAyuda">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/acercade.ico</normaloff>:/new/prefix1/iconos/acercade.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Ayuda</string>
+   </property>
+  </action>
+  <action name="actionSobre_QT">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/qt.png</normaloff>:/new/prefix1/iconos/qt.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sobre QT</string>
+   </property>
+  </action>
+  <action name="actionSobre_Autor">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/jefe.png</normaloff>:/new/prefix1/iconos/jefe.png</iconset>
+   </property>
+   <property name="text">
+    <string>Sobre Autor</string>
+   </property>
+  </action>
+  <action name="actionA">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/Abrir_A.png</normaloff>:/new/prefix1/iconos/Abrir_A.png</iconset>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionB">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/Abrir_B.png</normaloff>:/new/prefix1/iconos/Abrir_B.png</iconset>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionV">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/Abrir_V.png</normaloff>:/new/prefix1/iconos/Abrir_V.png</iconset>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionA_2">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/Guardar_A.png</normaloff>:/new/prefix1/iconos/Guardar_A.png</iconset>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionB_2">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/Guardar_B.png</normaloff>:/new/prefix1/iconos/Guardar_B.png</iconset>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionV_2">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/Guardar_V.png</normaloff>:/new/prefix1/iconos/Guardar_V.png</iconset>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionInterpolar">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/intercambiar.png</normaloff>:/new/prefix1/iconos/intercambiar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Interpolar</string>
+   </property>
+  </action>
+  <action name="actionExtrapolar">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/encontrar.png</normaloff>:/new/prefix1/iconos/encontrar.png</iconset>
+   </property>
+   <property name="text">
+    <string>Extrapolar</string>
+   </property>
+  </action>
+  <action name="actionGraficar">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/barra-grafica.png</normaloff>:/new/prefix1/iconos/barra-grafica.png</iconset>
+   </property>
+   <property name="text">
+    <string>Graficar</string>
+   </property>
+  </action>
+  <action name="actionPorbabilidad_y_Estadistica">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/probabilidad.png</normaloff>:/new/prefix1/iconos/probabilidad.png</iconset>
+   </property>
+   <property name="text">
+    <string> Estadistica</string>
+   </property>
+  </action>
+  <action name="actionTrigonometria">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/mesa.png</normaloff>:/new/prefix1/iconos/mesa.png</iconset>
+   </property>
+   <property name="text">
+    <string>Trigonometria</string>
+   </property>
+  </action>
+  <action name="actionAtributos">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/una.png</normaloff>:/new/prefix1/iconos/una.png</iconset>
+   </property>
+   <property name="text">
+    <string>Atributos</string>
+   </property>
+  </action>
+  <action name="actionEntre_Matrices">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/matriz_2.png</normaloff>:/new/prefix1/iconos/matriz_2.png</iconset>
+   </property>
+   <property name="text">
+    <string>Entre Matrices</string>
+   </property>
+  </action>
+  <action name="actionEntre_Escalar">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/eliminar-simbolo.png</normaloff>:/new/prefix1/iconos/eliminar-simbolo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Entre Escalar</string>
+   </property>
+  </action>
+  <action name="actionExtras">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/extra.png</normaloff>:/new/prefix1/iconos/extra.png</iconset>
+   </property>
+   <property name="text">
+    <string>Extras</string>
+   </property>
+  </action>
+  <action name="actionCodigo_Fuente">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/codigo-fuente.png</normaloff>:/new/prefix1/iconos/codigo-fuente.png</iconset>
+   </property>
+   <property name="text">
+    <string>Codigo Fuente</string>
+   </property>
+  </action>
+  <action name="actionDescargar">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/flecha-hacia-abajo.ico</normaloff>:/new/prefix1/iconos/flecha-hacia-abajo.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Descargar</string>
+   </property>
+  </action>
+  <action name="actionGraficar_Funciones">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/fx.png</normaloff>:/new/prefix1/iconos/fx.png</iconset>
+   </property>
+   <property name="text">
+    <string>Graficar Funciones</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="iconos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

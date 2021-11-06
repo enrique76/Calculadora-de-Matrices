@@ -1,0 +1,58 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>iconos/acercade.ico</file>
+        <file>iconos/amarillo.png</file>
+        <file>iconos/azul.png</file>
+        <file>iconos/books-42701_960_720.png</file>
+        <file>iconos/cafe.png</file>
+        <file>iconos/close.png</file>
+        <file>iconos/facebook.png</file>
+        <file>iconos/github.png</file>
+        <file>iconos/instagram.png</file>
+        <file>iconos/intercambio (1).png</file>
+        <file>iconos/jefe.png</file>
+        <file>iconos/libro.png</file>
+        <file>iconos/matriz.png</file>
+        <file>iconos/mexico.png</file>
+        <file>iconos/morado.png</file>
+        <file>iconos/naranja.png</file>
+        <file>iconos/OIP (1).jpg</file>
+        <file>iconos/OIP (3).jpg</file>
+        <file>iconos/operaciones.png</file>
+        <file>iconos/pdf.png</file>
+        <file>iconos/R (1).png</file>
+        <file>iconos/R.png</file>
+        <file>iconos/rojo.png</file>
+        <file>iconos/rosa.png</file>
+        <file>iconos/salvar.png</file>
+        <file>iconos/sitio-web.png</file>
+        <file>iconos/tipografia.png</file>
+        <file>iconos/verde.png</file>
+        <file>iconos/youtube.png</file>
+        <file>iconos/Abrir_A.png</file>
+        <file>iconos/Abrir_B.png</file>
+        <file>iconos/Abrir_V.png</file>
+        <file>iconos/Guardar_A.png</file>
+        <file>iconos/Guardar_B.png</file>
+        <file>iconos/Guardar_V.png</file>
+        <file>iconos/intercambiar.png</file>
+        <file>iconos/encontrar.png</file>
+        <file>iconos/mas.png</file>
+        <file>iconos/barra-grafica.png</file>
+        <file>iconos/matriz_2.png</file>
+        <file>iconos/mesa.png</file>
+        <file>iconos/probabilidad.png</file>
+        <file>iconos/una.png</file>
+        <file>iconos/extra.png</file>
+        <file>iconos/flecha-hacia-abajo.ico</file>
+        <file>iconos/codigo-fuente.png</file>
+        <file>iconos/excel.png</file>
+        <file>iconos/mayor-que-el-simbolo.png</file>
+        <file>iconos/simbolo-menor-que.png</file>
+        <file>iconos/marcador-de-posicion.png</file>
+        <file>iconos/qt.png</file>
+        <file>iconos/eliminar-simbolo.png</file>
+        <file>iconos/aprobacion.png</file>
+        <file>iconos/fx.png</file>
+    </qresource>
+</RCC>
