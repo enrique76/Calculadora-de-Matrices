@@ -2,9 +2,8 @@
 # Version Actual 06/11/21 1.7
 - Actualmente se trabaja en una graficadora sencilla
 
-![image](https://user-images.githubusercontent.com/64999014/140606776-45244415-cdc1-48df-9150-749c6b169671.png)
+![2021-11-09 00-54-30](https://user-images.githubusercontent.com/64999014/140895506-d922c120-81aa-4512-a5bd-266cdde92001.gif)
 
-![image](https://user-images.githubusercontent.com/64999014/140606894-5261ca29-4adc-47c9-9487-2823465a2fdf.png)
 
 # Imagenes extras
 
