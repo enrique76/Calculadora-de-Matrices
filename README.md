@@ -50,11 +50,14 @@
 
 - en un tiempo ridiculamente corto 
 
+![image](https://user-images.githubusercontent.com/64999014/143792628-d87a7482-c4a9-41b7-b56e-18acfbf647dc.png)
+
+
 # Planes a futuro
 
 1. Implementacin de la calculadora de funciones
 2. Uso de librerias de Matematicas Matricial y/o Algebra lineal de alto rendimiento como blaze.h, armadillo.h, xtensor.h, numcpp.h entre otras
-3. Optimizar el tema de errores con el implomento de ecepcciones 
+3. Optimizar el tema de errores con el implemento de ecepcciones 
 4. Optimizar el ingreso de datos, ya que acepta numeros, numeros imaginarios y polares. Para evitar errores
 5. Implementacion de librerias mas potentes de graficos, como gnuplot, chartdirector, qcustomplot y matplotlib-cpp
 6. Aumentar el max de datos, ya que por el momento solo permite 99x99 de tamaño  de la matriz, aun que con el widget QTableWidget solo permite 270 como maximo en columnas
