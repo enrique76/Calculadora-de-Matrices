@@ -4,10 +4,7 @@
 #include <QDialog>
 #include<QTableView>
 #include<QtCharts>
-#include<QChartView>
-#include<QBarSet>
-#include<QBarSeries>
-#include<QLineSeries>
+
 
 namespace Ui {
 class pye;
@@ -47,6 +44,7 @@ private:
     QVector<double> s,aux,l;
     double max,min;
     bool HoV = true;
+     QChart *chart = new QChart();
 };
 
 #endif // PYE_H

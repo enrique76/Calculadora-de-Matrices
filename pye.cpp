@@ -13,6 +13,9 @@
 #include<QVector>
 #include<QSharedPointer>
 #include<QMouseEvent>
+#include<QBarSet>
+#include<QBarSeries>
+#include<QLineSeries>
 
 pye::pye(QWidget *parent) :QDialog(parent),ui(new Ui::pye){
     ui->setupUi(this);
@@ -327,6 +330,7 @@ long pye::Factorial(int x){
 
 void pye::GraficaPastel(int z){
     QPieSeries *series = new QPieSeries();
+    chart->removeAllSeries();
     QString aux;
 
     series->setHoleSize(0.35);
@@ -345,39 +349,44 @@ void pye::GraficaPastel(int z){
             //ui->h->item(i,0)->setBackgroundColor(slice->color());
     }
 
-
-    QChart *plot = new QChart();
-    plot->addSeries(series);
-    plot->setTitle("Histograma de Frecuencias - Grafica de Pastel");
-    plot->setAnimationOptions(QChart::SeriesAnimations);
-    plot->setTheme(QChart::ChartThemeDark);
-    plot->legend()->hide();
+    chart->addSeries(series);
+    chart->setTitle("Histograma de Frecuencias - Grafica de Pastel");
+    chart->setAnimationOptions(QChart::SeriesAnimations);
+    chart->setTheme(QChart::ChartThemeDark);
+    chart->legend()->hide();
 
     if(z == 0){
-        plot->zoomIn();
+        chart->zoomIn();
     }
     else if(z == 1){
-        plot->zoomOut();
+        chart->zoomOut();
     }
     else if(z == 2){
-        plot->zoomReset();
+        chart->zoomReset();
     }
 
-    QChartView *chartview = new QChartView(plot);
+    QChartView *chartview = new QChartView(chart);
     chartview->setRenderHint(QPainter::Antialiasing);
     chartview->setParent(ui->basePastel);
-
-
 }
 
 void pye::GraficaBarras(int z){
     QBarSet *set = new QBarSet("Frecuencia");
-    QStringList categorias;
 
+    QLineSeries *media = new QLineSeries();
+
+    chart->removeAllSeries();
+
+
+
+    QStringList categorias;
         for(int i=0;i<ui->h->rowCount()-1;i++){
             *set<<ui->h->item(i,1)->text().toDouble(); // datos en y
             categorias<<ui->h->item(i,0)->text(); // datos en x
+            media->append(ui->h->item(i,0)->text().toDouble(),ui->Media->text().toDouble());
         }
+
+        qDebug()<<media;
 
        if(HoV){
            QBarSeries *series = new QBarSeries();
@@ -395,9 +404,9 @@ void pye::GraficaBarras(int z){
            chart->setTitle("Histograma de Frecuencias - Grafica de Barras");
 
 
-
            QChartView *plot = new QChartView(chart);
            plot->setParent(ui->baseBarras);
+
        }
        else{
            QHorizontalStackedBarSeries *series = new QHorizontalStackedBarSeries();
@@ -440,7 +449,7 @@ void pye::GraficaLineal(int z){
 
     //*series << QPointF(11,1) << QPointF(11,1) << QPointF(11,1) << QPointF(11,1) << QPointF(11,1) << QPointF(11,1);
 
-     QChart *chart = new QChart();
+     chart->removeAllSeries();
      chart->addSeries(series);
      chart->setAnimationOptions(QChart::SeriesAnimations);
      chart->setTheme(QChart::ChartThemeDark);
@@ -491,11 +500,7 @@ void pye::on_tabWidget_tabBarClicked(int index)
 
 
 void pye::on_ventanas_tabBarClicked(int index){
-    switch(index){
-        case 0:
-            GraficaBarras(5);
-        break;
-    }
+
 }
 
 void pye::on_MasZoom_clicked(){
@@ -508,7 +513,9 @@ void pye::on_MasZoom_clicked(){
     }
     else{
         qDebug()<<"Linea y Mas Zoom";
+
     }
+    chart->zoomIn();
 }
 
 void pye::on_ZoomOriginal_clicked(){
@@ -520,7 +527,9 @@ void pye::on_ZoomOriginal_clicked(){
     }
     else{
         qDebug()<<"Linea y Zoom Original";
+
     }
+    chart->zoomReset();
 }
 
 void pye::on_MenosZoom_clicked(){
@@ -532,6 +541,8 @@ void pye::on_MenosZoom_clicked(){
     }
     else{
         qDebug()<<"Lineal y Menos Zoom ";
+
     }
+    chart->zoomOut();
 }
 

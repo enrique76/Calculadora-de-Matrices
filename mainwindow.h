@@ -74,6 +74,8 @@ private slots:
 
     void on_actionGraficar_Funciones_triggered();
 
+    void on_chart3d_triggered();
+
 private:
     Ui::MainWindow *ui;
     double s[10000];

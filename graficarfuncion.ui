@@ -13,43 +13,6 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QGroupBox" name="groupBox">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>351</width>
-     <height>81</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Funcion en base x</string>
-   </property>
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QPushButton" name="fx">
-        <property name="text">
-         <string>F(x) = </string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="0" column="1">
-     <widget class="QLineEdit" name="ecuacion">
-      <property name="font">
-       <font>
-        <pointsize>10</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="QGroupBox" name="groupBox_2">
    <property name="geometry">
     <rect>
@@ -75,7 +38,10 @@
       <item>
        <widget class="QSpinBox" name="li">
         <property name="minimum">
-         <number>-99</number>
+         <number>-100000</number>
+        </property>
+        <property name="maximum">
+         <number>100000</number>
         </property>
         <property name="value">
          <number>1</number>
@@ -92,7 +58,10 @@
       <item>
        <widget class="QSpinBox" name="ls">
         <property name="minimum">
-         <number>-99</number>
+         <number>-100000</number>
+        </property>
+        <property name="maximum">
+         <number>100000</number>
         </property>
         <property name="value">
          <number>10</number>
@@ -115,6 +84,15 @@
       </item>
       <item>
        <widget class="QDoubleSpinBox" name="s">
+        <property name="decimals">
+         <number>5</number>
+        </property>
+        <property name="minimum">
+         <double>-0.000010000000000</double>
+        </property>
+        <property name="maximum">
+         <double>100000.000000000000000</double>
+        </property>
         <property name="value">
          <double>1.000000000000000</double>
         </property>
@@ -219,26 +197,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QGroupBox" name="groupBox_5">
-   <property name="geometry">
-    <rect>
-     <x>400</x>
-     <y>10</y>
-     <width>641</width>
-     <height>591</height>
-    </rect>
-   </property>
-   <property name="title">
-    <string>Grafica</string>
-   </property>
-   <layout class="QGridLayout" name="gridLayout_3">
-    <item row="0" column="0">
-     <widget class="QFrame" name="basePlot">
-      <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-     </widget>
-    </item>
-   </layout>
-  </widget>
   <widget class="Line" name="line">
    <property name="geometry">
     <rect>
@@ -273,6 +231,168 @@
      <widget class="QLabel" name="pasar">
       <property name="text">
        <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>351</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Tab 1</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="0">
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="fx">
+         <property name="text">
+          <string>F(x) = </string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="ecuacion">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Tab 2</string>
+    </attribute>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QComboBox" name="funciones">
+       <item>
+        <property name="text">
+         <string>Sen(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cos(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Tan(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Cot(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Sec(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Csc(x)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>e^x</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>20</y>
+     <width>641</width>
+     <height>511</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>GroupBox</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <item row="0" column="0">
+     <widget class="QFrame" name="basePlot">
+      <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>540</y>
+     <width>115</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QPushButton" name="menos">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="iconos.qrc">
+        <normaloff>:/new/prefix1/iconos/simbolo-menor-que.png</normaloff>:/new/prefix1/iconos/simbolo-menor-que.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="origen">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="iconos.qrc">
+        <normaloff>:/new/prefix1/iconos/marcador-de-posicion.png</normaloff>:/new/prefix1/iconos/marcador-de-posicion.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="mas">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="iconos.qrc">
+        <normaloff>:/new/prefix1/iconos/mayor-que-el-simbolo.png</normaloff>:/new/prefix1/iconos/mayor-que-el-simbolo.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
       </property>
      </widget>
     </item>

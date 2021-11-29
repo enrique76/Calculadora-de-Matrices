@@ -931,6 +931,7 @@ url(:/new/prefix1/iconos/119470305_769224333620822_2647290635897348482_n.jpg)</s
     <addaction name="actionExtras"/>
     <addaction name="separator"/>
     <addaction name="actionGraficar_Funciones"/>
+    <addaction name="chart3d"/>
    </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuSobre"/>
@@ -1136,6 +1137,15 @@ url(:/new/prefix1/iconos/119470305_769224333620822_2647290635897348482_n.jpg)</s
    </property>
    <property name="text">
     <string>Graficar Funciones</string>
+   </property>
+  </action>
+  <action name="chart3d">
+   <property name="icon">
+    <iconset resource="iconos.qrc">
+     <normaloff>:/new/prefix1/iconos/319546.png</normaloff>:/new/prefix1/iconos/319546.png</iconset>
+   </property>
+   <property name="text">
+    <string>3d</string>
    </property>
   </action>
  </widget>

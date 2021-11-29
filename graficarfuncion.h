@@ -7,6 +7,8 @@
 #include<QBarSeries>
 #include<QLineSeries>
 #include<QChartView>
+#include<QVector>
+#include<QValueAxis>
 
 namespace Ui {
 class GraficarFuncion;
@@ -19,7 +21,7 @@ class GraficarFuncion : public QDialog
 public:
     explicit GraficarFuncion(QWidget *parent = nullptr);
     ~GraficarFuncion();
-    void Tabular(QStringList);
+    void Tabular();
 
 private slots:
     void on_fx_clicked();
@@ -34,6 +36,16 @@ private slots:
     void on_ecuacion_textChanged(const QString &arg1);
 
 
+    void on_funciones_activated(const QString &arg1);
+    void Graficar();
+    void Data(QStringList);
+
+    void on_mas_clicked();
+
+    void on_origen_clicked();
+
+    void on_menos_clicked();
+
 private:
     Ui::GraficarFuncion *ui;
     int li,ls;
@@ -41,6 +53,11 @@ private:
     bool V = false;
     QChart *chart = new QChart();
     QChartView *cplot = new  QChartView(chart);
+    QVector<double> x;
+    QVector<double> y;
+    double minx,maxx,miny,maxy;
+    QValueAxis *Ay = new QValueAxis;
+    QValueAxis *Ax = new QValueAxis;
 };
 
 #endif // GRAFICARFUNCION_H

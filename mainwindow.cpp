@@ -23,6 +23,7 @@
 #include<QDesktopServices>
 #include<QUrl>
 #include<graficarfuncion.h>
+#include"chart3d.h"
 
 MainWindow::MainWindow(QWidget *parent): QMainWindow(parent), ui(new Ui::MainWindow){
     ui->setupUi(this);
@@ -1715,5 +1716,15 @@ void MainWindow::on_actionGraficar_Funciones_triggered(){
     f.setWindowIcon(ui->actionGraficar_Funciones->icon());
 
     f.exec();
+}
+
+void MainWindow::on_chart3d_triggered(){
+    chart3d  chart3d(this);
+
+    chart3d.PasarDatos(ui->A);
+
+    chart3d.Chart3D();
+
+    chart3d.exec();
 }
 

@@ -1,8 +1,12 @@
 QT       += core gui charts
+QT       += core gui widgets datavisualization
 
+#QT       += core gui webengineview
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets printsupport
+#include(../qtmathjax-master/qtmathjax-master/qtmathjax.pri)
 
 CONFIG += c++14
+
 
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
@@ -11,6 +15,7 @@ CONFIG += c++14
 SOURCES += \
     autor.cpp \
     ayuda.cpp \
+    chart3d.cpp \
     copiarmatrices.cpp \
     direccion.cpp \
     graficarfuncion.cpp \
@@ -23,6 +28,7 @@ SOURCES += \
 HEADERS += \
     autor.h \
     ayuda.h \
+    chart3d.h \
     copiarmatrices.h \
     direccion.h \
     graficarfuncion.h \
@@ -34,6 +40,7 @@ HEADERS += \
 FORMS += \
     autor.ui \
     ayuda.ui \
+    chart3d.ui \
     copiarmatrices.ui \
     direccion.ui \
     graficarfuncion.ui \
